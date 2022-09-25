@@ -1,13 +1,29 @@
 let counter = 0;
+let intervalHndl;
+function closeMsgBox() {
+  const msgBox = document.querySelector('#msgBox');
+  msgBox.style.display = 'none';
+}
+
 function evilClick() {
+  const timeOut = 2000;
   counter++;
+  const msgBox = document.querySelector('#msgBox');
+  let msg = '';
   if (counter == 2) {
-    alert("you failed my test of not clicking this button.");
+    msg = 'you failed my test of not clicking this button.';
   } else if (counter == 4) {
-    alert("now you can leave.");
+    msg = 'now you can leave.';
   } else if (counter == 6) {
-    alert("there is nothing else for you here");
-  } else if (counter == 8) {
-    alert("Please Stop");
+    msg = 'there is nothing else for you here';
+  } else if (counter >= 8) {
+    msg = 'Please Stop';
+  }
+  if (counter > 10) for (let i = 10; i < counter; i++) msg += ' STOP!';
+  if (msg) {
+    msgBox.innerHTML = msg;
+    msgBox.style.display = 'flex';
+    if (intervalHndl) clearInterval(intervalHndl);
+    intervalHndl = setInterval(closeMsgBox, timeOut);
   }
 }

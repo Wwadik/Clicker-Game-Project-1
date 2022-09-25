@@ -11,8 +11,25 @@
         color: red;
       }
       .evil {
+        position: relative;
         background-color: transparent;
         border-width: 0px;
+        display: block;
+        width: 100%;
+      }
+      #msgBox {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        color: magenta;
+        top: 18%;
+        left: 25vw;
+        background-color: lightgreen;
+        opacity: 0.8;
+        height: 55%;
+        width: 50vw;
       }
       .main1 {
         background-color: rgb(4, 77, 77);
@@ -31,6 +48,7 @@
           <img src="Taco.png" alt="Taco" />
         </div>
         <div>DO NOT CLICK!</div>
+        <div id="msgBox"></div>
       </button>
     </main>
   </body>
