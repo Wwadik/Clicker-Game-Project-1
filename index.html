@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stop_Clicking</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="normalize.css" />
+    <style>
+      .evil {
+        background-color: transparent;
+        border-width: 0px;
+      }
+      .main1 {
+        background-color: rgb(4, 77, 77);
+        color: rgba(247, 0, 0, 0.842);
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <main class="main1">
+      <button class="evil" onclick="evilClick()">
+        <img src="Taco.png" alt="Taco" />
+      </button>
+      Never going to give you up
+    </main>
+  </body>
 </html>
